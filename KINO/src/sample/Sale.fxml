@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="sample.SaleController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <TableView fx:id="tablica" prefHeight="400.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn id="numer" prefWidth="104.0" text="numer sali" />
+                <TableColumn id="miejsca" prefWidth="114.99999237060547" text="ilość miejsc" />
+                <TableColumn id="rodzaj" minWidth="0.0" prefWidth="127.0" text="typ" />
+            </columns>
+        </TableView>
+    </center>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <TextField fx:id="numer" promptText="Numer sali:"/>
+            <TextField fx:id="miejsca" promptText="Ilość miejsc:"/>
+            <TextField fx:id="rodzaj" promptText="Typ:"/>
+            <Button fx:id="edit" mnemonicParsing="false" onAction="#edycja" text="Edytuj"/>
+            <Button fx:id="add" mnemonicParsing="false" onAction="#dodaj" text="Dodaj"/>
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#usun" text="Usun"/>
+            <Button fx:id="synchro" mnemonicParsing="false" onAction="#synchro" text="Synchronizuj"/>
+            <Button fx:id="back" mnemonicParsing="false" onAction="#usunZmiany" text="Usun zmiany"/>
+        </VBox>
+    </right>
+</BorderPane>
